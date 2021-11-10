@@ -3626,7 +3626,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="J1" library="SparkFun-Connectors" deviceset="QWIIC_CONNECTOR" device="JS-1MM" value="QWIIC_RIGHT_ANGLE"/>
 <part name="J4" library="SparkFun-Connectors" deviceset="CONN_05" device="NO_SILK"/>
 <part name="J5" library="SparkFun-Connectors" deviceset="CONN_04" device="1X04_NO_SILK"/>
-<part name="JP1" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1"/>
+<part name="EN" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1"/>
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="QWIIC_CONNECTOR" device="JS-1MM" value="QWIIC_RIGHT_ANGLE"/>
@@ -3657,6 +3657,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="218.44" y="180.34" size="2.54" layer="97">Power LED</text>
 <text x="149.86" y="106.68" size="2.54" layer="97">Qwiic Connectors</text>
 <text x="149.86" y="68.58" size="2.54" layer="97">0.1" Headers</text>
+<text x="55.88" y="111.76" size="1.27" layer="94">Cut and solder EN jumper to 
+expose enable pin to EN header</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -3746,8 +3748,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="VALUE" x="205.74" y="43.434" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="205.74" y="58.928" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="JP1" gate="G$1" x="83.82" y="104.14" smashed="yes" rot="R90">
-<attribute name="NAME" x="83.439" y="106.68" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="EN" gate="G$1" x="83.82" y="104.14" smashed="yes" rot="R90">
+<attribute name="NAME" x="84.836" y="107.823" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="SUPPLY4" gate="G$1" x="185.42" y="99.06" smashed="yes">
 <attribute name="VALUE" x="185.42" y="101.854" size="1.778" layer="96" align="bottom-center"/>
@@ -3926,7 +3928,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="91.44" y1="104.14" x2="91.44" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="93.98" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
 <junction x="91.44" y="93.98"/>
-<pinref part="JP1" gate="G$1" pin="3"/>
+<pinref part="EN" gate="G$1" pin="3"/>
 <wire x1="88.9" y1="104.14" x2="91.44" y2="104.14" width="0.1524" layer="91"/>
 <junction x="91.44" y="104.14"/>
 </segment>
@@ -4039,14 +4041,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$1" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="EN"/>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="EN" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="96.52" x2="83.82" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="96.52" x2="83.82" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EN" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="EN" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="104.14" x2="76.2" y2="104.14" width="0.1524" layer="91"/>
 <label x="76.2" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -4069,6 +4071,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
