@@ -1,12 +1,11 @@
-SparkFun Qwiic 1.8V adapter
+SparkFun Qwiic 1.8V Adapter
 ========================================
 
-![SparkFun Part Name](URL for picture of part)
+![Qwiic 1.8V Adapter](https://cdn.sparkfun.com//assets/parts/1/8/6/2/7/19017-Qwiic_1.8V_Adapter-01.jpg)
 
-[*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
+[*Qwiic 1.8V Adapter (SPX-19017)*](https://www.sparkfun.com/products/19017)
 
-The Qwiic 1.8V Adapter does what it says on the box: Adapts 1.8V sensors to work with the Qwiic system! 
-It does this using the PCA9306 dual bidirectional I2C voltage-level translator for the data lines alongside a small 300mA LDO for the power. 
+Our [Qwiic Connect System](https://www.sparkfun.com/qwiic) is designed to help you quickly interface development boards and breakouts in your project or prototype. One way the Qwiic system achieves this is by standardizing on a single bus voltage of 3.3 Volts. This means that any Qwiic-compatible board that's based on a 1.8V part has an on-board voltage regulator and logic level translator, but what if you have a 1.8V part with no breakout board and you need to get integrated into your Qwiic project? No worries! This Qwiic 1.8V Adapter supplies 1.8V at up to 300mA as well as bi-directional logic level translation so that you can connect your Qwiic system to any 1.8V I²C part you can find! Simply connect the adapter to your bus using a Qwiic cable, connect your 1.8V part to the header pins marked "1.8V," and now your part is on the 3.3V Qwiic bus! As on other Qwiic boards, we've also broken out the 3.3V pins to a 0.1" header and added two Qwiic connectors, making it easy to connect in line with all of your other Qwiic boards.
 
 Repository Contents
 -------------------
